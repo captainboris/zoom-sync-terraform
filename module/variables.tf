@@ -1,5 +1,3 @@
-# module/variables.tf 文件
-
 variable "s3_bucket_name" {
   type        = string
   description = "The name of the existing S3 bucket to upload recordings"
