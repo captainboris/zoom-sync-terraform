@@ -39,3 +39,8 @@ variable "lambda_s3_bucket" {
   type        = string
   description = "The S3 bucket for the Lambda function"
 }
+
+variable "aws_lambda_layer_version_arn" {
+  type        = string
+  description = "The ARN of the Lambda layer version"
+}
