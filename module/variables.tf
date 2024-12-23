@@ -39,3 +39,8 @@ variable "lambda_zip_path" {
   type        = string
   description = "Path to the Lambda zip file"
 } 
+
+variable "aws_lambda_layer_version_arn" {
+  type        = string
+  description = "The ARN of the Lambda layer version"
+}

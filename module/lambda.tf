@@ -5,6 +5,7 @@ resource "aws_lambda_function" "zoom_upload_lambda" {
   runtime          = var.lambda_runtime
   s3_bucket        = var.lambda_s3_bucket
   s3_key           = var.lambda_zip_path
+  layers           = var.aws_lambda_layer_version_arn
 
   environment {
     variables = {
