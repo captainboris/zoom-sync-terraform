@@ -24,3 +24,18 @@ variable "sns_email" {
   type        = string
   description = "Email address for SNS topic subscription"
 }
+
+variable "zoom_webhook_secret_token" {
+  type        = string
+  description = "Zoom Webhook secret token"
+}
+
+variable "mongodb_api_endpoint" {
+  type        = string
+  description = "JR zoom server API endpoint"
+}
+
+variable "lambda_s3_bucket" {
+  type        = string
+  description = "The S3 bucket for the Lambda function"
+}
