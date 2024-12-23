@@ -25,4 +25,4 @@ terraform.rc
 # Ignore plan output files
 *.tfplan
 
-.terraform.lock.hcl
+*.terraform.lock.hcl
