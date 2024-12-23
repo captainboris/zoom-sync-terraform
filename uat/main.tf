@@ -13,4 +13,5 @@ module "zoom_to_s3" {
   mongodb_api_endpoint = var.mongodb_api_endpoint
   lambda_s3_bucket = var.lambda_s3_bucket
   lambda_zip_path = var.lambda_zip_path
+  aws_lambda_layer_version_arn = var.aws_lambda_layer_version_arn
 }
