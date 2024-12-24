@@ -1,11 +1,11 @@
 resource "aws_lambda_function" "zoom_upload_lambda" {
   function_name    = "zoomToS3Uploader"
   role             = aws_iam_role.lambda_exec_role.arn
-  handler          = "index.handler"
+  handler          = "lambda.lambda_handler"
   runtime          = var.lambda_runtime
   s3_bucket        = var.lambda_s3_bucket
   s3_key           = var.lambda_zip_path
-  layers           = var.aws_lambda_layer_version_arn
+  layers           = [var.aws_lambda_layer_version_arn]
 
   environment {
     variables = {

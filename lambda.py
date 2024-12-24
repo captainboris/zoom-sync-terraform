@@ -123,6 +123,7 @@ def lambda_handler(event, context):
     print(f"Event received: {event}")
     errors = []  # List to store error messages
     skipped_files = []  # List to track skipped files
+    
     try:
         if event.get('event') == "endpoint.url_validation":
             plain_token = event['payload']['plainToken']
@@ -196,6 +197,11 @@ def lambda_handler(event, context):
 
             response_message = {
                 "message": "Video files processed successfully" if not errors else "Processed with errors"}
+        else:
+            return {
+                "statusCode": 400,
+                "body": json.dumps({"error": "Unsupported event type"})
+            }
                 
     except Exception as e:
         error_message = f"Error processing event: {e}"
